@@ -20,6 +20,11 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <Preference
+            android:key="traffic"
+            android:fragment="org.boxer.iron.fragments.Traffic"
+            android:title="@string/traffic_title" />
+
+    <Preference
         android:key="systemui_tuner_statusbar"
         android:title="@string/statusbar_items_category">
         <intent android:action="android.intent.action.MAIN"
