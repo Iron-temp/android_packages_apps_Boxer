@@ -28,6 +28,11 @@
     </Preference>
 
     <Preference
+        android:key="status_bar_clock"
+        android:fragment="org.boxer.iron.fragments.ClockDateSettings"
+        android:title="@string/status_bar_clock_title" />
+
+    <Preference
         android:key="misc_iron"
         android:fragment="org.boxer.iron.fragments.MiscIron"
         android:title="@string/misc_iron_title" />
