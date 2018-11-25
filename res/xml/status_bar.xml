@@ -24,6 +24,12 @@
             android:fragment="org.boxer.iron.fragments.Traffic"
             android:title="@string/traffic_title" />
 
+    <org.iron.support.preference.SystemSettingSwitchPreference
+            android:key="data_disabled_icon"
+            android:title="@string/data_disabled_icon_title"
+            android:summary="@string/data_disabled_icon_summary"
+            android:defaultValue="true"/>
+
     <Preference
         android:key="systemui_tuner_statusbar"
         android:title="@string/statusbar_items_category">
