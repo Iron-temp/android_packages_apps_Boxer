@@ -194,4 +194,10 @@
         </org.boxer.iron.preference.ActionPreference>
 
     </PreferenceCategory>
+		
+	<SwitchPreference
+        android:key="force_show_navbar"
+        android:title="@string/navigation_bar_title"
+        android:summary="@string/navigation_bar_summary" />
+
 </PreferenceScreen>
