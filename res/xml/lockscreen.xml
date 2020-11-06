@@ -29,6 +29,12 @@
          android:fragment="org.boxer.iron.fragments.LockscreenShortcuts"
          android:title="@string/lockscreen_shortcuts" />
 
+    <org.iron.support.preference.SystemSettingSwitchPreference
+        android:key="lockscreen_battery_info"
+        android:title="@string/lockscreen_battery_info_title"
+        android:summary="@string/lockscreen_battery_info_summary"
+        android:defaultValue="true" />
+
     <PreferenceCategory
         android:key="udfps_category"
         android:title="@string/udfps_category">
