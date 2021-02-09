@@ -34,6 +34,12 @@
         android:fragment="org.boxer.iron.fragments.EdgeLightningSettings"
         android:defaultValue="false" />
 
+	<org.iron.support.preference.SystemSettingSwitchPreference
+        android:key="pulse_on_new_tracks"
+        android:title="@string/pulse_on_new_tracks_title"
+        android:summary="@string/pulse_on_new_tracks_summary"
+        android:defaultValue="true" />
+
 	<PreferenceCategory
         android:key="headsup_notifications_category"
         android:title="@string/headsup_category">
