@@ -19,10 +19,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <org.iron.support.preference.CardviewPreference
+    <Preference
         android:key="buttons"
         android:fragment="org.boxer.iron.fragments.Buttons"
-        android:icon="@drawable/ic_buttons"
         android:title="@string/buttons_title" />
 
 </PreferenceScreen>

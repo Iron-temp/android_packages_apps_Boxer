@@ -19,19 +19,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <org.iron.support.preference.CardviewPreference
+    <Preference
         android:key="systemui_tuner_statusbar"
-        android:title="@string/statusbar_items_category"
-        android:icon="@drawable/ic_statusbar_items" >
+        android:title="@string/statusbar_items_category">
         <intent android:action="android.intent.action.MAIN"
             android:targetPackage="com.android.systemui"
             android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
-    </org.iron.support.preference.CardviewPreference>
+    </Preference>
 
-    <org.iron.support.preference.CardviewPreference
+    <Preference
         android:key="misc_iron"
         android:fragment="org.boxer.iron.fragments.MiscIron"
-        android:icon="@drawable/ic_misc_iron"
         android:title="@string/misc_iron_title" />
 
 </PreferenceScreen>

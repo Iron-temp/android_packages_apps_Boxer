@@ -19,16 +19,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-     <org.iron.support.preference.CardviewPreference
+    <Preference
          android:key="lockscreen_ui"
          android:fragment="org.boxer.iron.fragments.LockscreenUI"
-         android:icon="@drawable/ic_lockscreen_ui"
          android:title="@string/lockscreen_ui_title" />
 
-     <org.iron.support.preference.CardviewPreference
+    <Preference
          android:key="lockscreen_shortcuts"
          android:fragment="org.boxer.iron.fragments.LockscreenShortcuts"
-         android:icon="@drawable/ic_lockscreen_shortcuts"
          android:title="@string/lockscreen_shortcuts" />
 
 </PreferenceScreen>
