@@ -120,6 +120,10 @@
     <!-- Gesture -->
     <string name="system_navigation_summary">Configure navigation menus</string>
 
+    <!-- AOSP Gestures -->
+    <string name="aosp_gesture_preference">AOSP Gestures</string>
+    <string name="aosp_gesture_summary">Stock gestures included with AOSP</string>
+
     <!-- Monet Engine -->
     <string name="monet_engine_custom_color_title">Use custom color</string>
     <string name="monet_engine_custom_color_summary">Use custom color for monet engine instead of wallpaper colors</string>
