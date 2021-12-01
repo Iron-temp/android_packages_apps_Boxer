@@ -114,4 +114,7 @@
     <string name="powermenu_logout">Logout</string>
     <string name="powermenu_emergency">Emergency</string>
 
+    <!-- Gesture -->
+    <string name="system_navigation_summary">Configure navigation menus</string>
+
 </resources>
