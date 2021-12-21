@@ -420,4 +420,18 @@
     <string name="battery_bar_blend_color_reverse_summary_off">Full &#8594; empty: red &#8592; green &#8592; blue &#8592; red</string>
     <string name="battery_bar_blend_color_reverse_summary_on">Full &#8594; empty: red &#8594; green &#8594; blue &#8594; red</string>
 
+    <!-- Udfps animations -->
+    <string name="udfps_category">Udfps</string>
+    <string name="udfps_recog_animation">Udfps animation</string>
+    <string name="udfps_recog_animation_summary">Shows an animation while reading your finger</string>
+    <string name="udfps_recog_animation_effect_title">Udfps animation effect</string>
+    <string name="udfps_recog_animation_effect_summary">Choose animation effect</string>
+
+    <!-- Udfps icon picker -->
+    <string name="udfps_icon_picker_title">Udfps icon picker</string>
+    <string name="udfps_icon_picker_summary">Choose your favorite fingerprint icon</string>
+
+    <!-- Udfps Custom Options -->
+    <string name="udfps_settings_title">Udfps Options</string>
+    <string name="udfps_settings_summary">Configure Your Udfps</string>
 </resources>
