@@ -46,6 +46,12 @@
             android:fragment="org.boxer.iron.fragments.UdfpsAnimation"/>
 
 	<org.iron.support.preference.SystemSettingSwitchPreference
+            android:key="udfps_haptic_feedback"
+            android:title="@string/udfps_haptic_feedback_title"
+            android:summary="@string/udfps_haptic_feedback_summary"
+            android:defaultValue="true" />
+
+	<org.iron.support.preference.SystemSettingSwitchPreference
             android:key="screen_off_fod"
             android:title="@string/screen_off_fod_title"
             android:summary="@string/screen_off_fod_summary"

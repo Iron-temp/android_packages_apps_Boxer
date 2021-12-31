@@ -69,12 +69,15 @@ public class UdfpsSettings extends SettingsPreferenceFragment implements
     private static final String CUSTOM_FP_FILE_SELECT = "custom_fp_file_select";
     private static final int REQUEST_PICK_IMAGE = 0;
     private static final String SCREEN_OFF_FOD_KEY = "screen_off_fod";
+    private static final String UDFPS_HAPTIC_FEEDBACK = "udfps_haptic_feedback";
 
     private Preference mCustomFPImage;
     private SystemSettingSwitchPreference mCustomFodIcon;
     private Preference mUdfpsIconPicker;
 
     Preference mFODPref;
+    private SystemSettingSwitchPreference mFODScreenOff;
+    private SystemSettingSwitchPreference mUdfpsHapticFeedback;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -108,9 +111,11 @@ public class UdfpsSettings extends SettingsPreferenceFragment implements
             mUdfpsIconPicker.setEnabled(true);
         }
 
-		mFODPref = findPreference(SCREEN_OFF_FOD_KEY);
+	mFODScreenOff = (SystemSettingSwitchPreference) findPreference(SCREEN_OFF_FOD_KEY);
+        mUdfpsHapticFeedback = (SystemSettingSwitchPreference) findPreference(UDFPS_HAPTIC_FEEDBACK);
         if (!FodUtils.hasFodSupport(getContext())) {
-            removePreference(SCREEN_OFF_FOD_KEY);
+            prefScreen.removePreference(mFODScreenOff);
+            prefScreen.removePreference(mUdfpsHapticFeedback);	
         }
 
     }
