@@ -56,6 +56,10 @@
     <!-- Misc Iron -->
     <string name="misc_iron_title">Misc Iron</string>
 
+    <!-- Monet -->
+    <string name="monet_title">Monet Settings</string>
+    <string name="monet_category">Monet</string>
+
     <!-- Lockscreen icons -->
     <string name="lockscreen_shortcuts">Lockscreen Shortcuts</string>
 
