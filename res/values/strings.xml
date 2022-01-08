@@ -533,4 +533,11 @@
 	<!-- Keyguard force small clock -->
     <string name="lockscreen_small_clock_title">Force small clock</string>
     <string name="lockscreen_small_clock_summary">Don\'t switch to the big clock when there are no notifications</string>
+
+    <!-- Qs Column Settings -->
+    <string name="qs_columns_cat">Qs Column Menu</string>
+    <string name="qs_columns_portrait_title">Qs Columns in Portrait</string>
+    <string name="qs_columns_landscape_title">Qs Columns in Landscape</string>
+    <string name="qs_tile_vertical_layout_title">Qs Vertical Layout</string>
+    <string name="qs_tile_vertical_layout_summary">Enable-disable tile vertical layout</string>
 </resources>
