@@ -54,4 +54,9 @@
         android:fragment="org.boxer.iron.fragments.MiscIron"
         android:title="@string/misc_iron_title" />
 
+    <Preference
+        android:key="battery_bar_category"
+        android:fragment="org.boxer.iron.fragments.BatteryBar"
+        android:title="@string/battery_bar_title" />
+
 </PreferenceScreen>
