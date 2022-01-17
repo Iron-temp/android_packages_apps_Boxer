@@ -21,6 +21,11 @@
         android:fragment="org.boxer.iron.fragments.QuickSettings"
         android:title="@string/quick_settings_title" />
 
+	<Preference
+        android:key="charging_light"
+        android:fragment="org.boxer.iron.fragments.BatteryLightSettings"
+        android:title="@string/battery_light_settings" />
+
 	<PreferenceCategory
         android:key="headsup_notifications_category"
         android:title="@string/headsup_category">
