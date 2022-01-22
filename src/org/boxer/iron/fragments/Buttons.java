@@ -22,9 +22,15 @@ import android.content.ContentResolver;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.UserHandle;
 import android.os.RemoteException;
 import android.os.ServiceManager;
+import android.os.SystemProperties;
+import android.util.Log;
+import android.widget.Toast;
+
+import androidx.fragment.app.DialogFragment;
 import androidx.preference.Preference;
 import androidx.preference.ListPreference;
 import androidx.preference.PreferenceCategory;
@@ -50,6 +56,7 @@ import com.android.settings.Utils;
 import com.android.internal.util.hwkeys.ActionConstants;
 import com.android.internal.util.hwkeys.ActionUtils;
 import org.boxer.iron.preference.ActionFragment;
+import org.iron.support.preference.SystemSettingSwitchPreference;
 
 import java.util.Locale;
 import java.util.regex.Matcher;
@@ -88,6 +95,10 @@ public class Buttons extends ActionFragment implements OnPreferenceChangeListene
     private Preference mLayoutSettings;
     private SwitchPreference mNavigationBar;
     private SystemSettingSwitchPreference mNavigationArrows;
+
+    private boolean mIsNavSwitchingMode = false;
+
+    private Handler mHandler;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -184,6 +195,9 @@ public class Buttons extends ActionFragment implements OnPreferenceChangeListene
         mLayoutSettings = (Preference) findPreference(KEY_LAYOUT_SETTINGS);
 
         mNavigationArrows = (SystemSettingSwitchPreference) findPreference(KEY_NAVIGATION_BAR_ARROWS);
+
+        mHandler = new Handler();
+
     }
 
     @Override
@@ -219,9 +233,19 @@ public class Buttons extends ActionFragment implements OnPreferenceChangeListene
                     value ? 1 : 0);
             setActionPreferencesEnabled(!value);
         } else if (preference == mNavigationBar) {
-            boolean value = (Boolean) newValue;
+            boolean value = (Boolean) objValue;
+            if (mIsNavSwitchingMode) {
+                return false;
+            }
+            mIsNavSwitchingMode = true;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.FORCE_SHOW_NAVBAR, value ? 1 : 0);
+            mHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    mIsNavSwitchingMode = false;
+                }
+            }, 1500);
             return true;
         }
         return false;
