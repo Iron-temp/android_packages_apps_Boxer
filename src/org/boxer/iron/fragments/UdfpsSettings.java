@@ -68,10 +68,13 @@ public class UdfpsSettings extends SettingsPreferenceFragment implements
     private static final String CUSTOM_FOD_ICON_KEY = "custom_fp_icon_enabled";
     private static final String CUSTOM_FP_FILE_SELECT = "custom_fp_file_select";
     private static final int REQUEST_PICK_IMAGE = 0;
+    private static final String SCREEN_OFF_FOD_KEY = "screen_off_fod";
 
     private Preference mCustomFPImage;
     private SystemSettingSwitchPreference mCustomFodIcon;
     private Preference mUdfpsIconPicker;
+
+    Preference mFODPref;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -104,6 +107,12 @@ public class UdfpsSettings extends SettingsPreferenceFragment implements
         } else {
             mUdfpsIconPicker.setEnabled(true);
         }
+
+		mFODPref = findPreference(SCREEN_OFF_FOD_KEY);
+        if (!FodUtils.hasFodSupport(getContext())) {
+            removePreference(SCREEN_OFF_FOD_KEY);
+        }
+
     }
 
     @Override
