@@ -50,8 +50,8 @@ import android.text.TextUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.android.internal.util.iron.fod.FodUtils;
 import com.android.internal.util.iron.IRONUtils;
+import com.android.internal.util.iron.udfps.UdfpsUtils;
 
 import org.iron.support.preference.SystemSettingSwitchPreference;
 import org.boxer.iron.fragments.UdfpsIconPicker;
@@ -113,7 +113,7 @@ public class UdfpsSettings extends SettingsPreferenceFragment implements
 
 	mFODScreenOff = (SystemSettingSwitchPreference) findPreference(SCREEN_OFF_FOD_KEY);
         mUdfpsHapticFeedback = (SystemSettingSwitchPreference) findPreference(UDFPS_HAPTIC_FEEDBACK);
-        if (!FodUtils.hasFodSupport(getContext())) {
+        if (!UdfpsUtils.hasUdfpsSupport(getContext())) {
             prefScreen.removePreference(mFODScreenOff);
             prefScreen.removePreference(mUdfpsHapticFeedback);	
         }
