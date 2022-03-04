@@ -542,4 +542,7 @@
     <!-- Screen off FOD -->
     <string name="screen_off_fod_title">Screen off FOD</string>
     <string name="screen_off_fod_summary">Keep FOD enabled when the screen is off</string>
+
+    <string name="search">Search</string>
+    <string name="search_apps">Search apps</string>
 </resources>
